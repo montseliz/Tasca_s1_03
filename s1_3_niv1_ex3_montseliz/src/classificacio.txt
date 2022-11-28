@@ -1,2 +1,4 @@
 Nom: montse
 Punts: 5
+Nom: pau
+Punts: 4

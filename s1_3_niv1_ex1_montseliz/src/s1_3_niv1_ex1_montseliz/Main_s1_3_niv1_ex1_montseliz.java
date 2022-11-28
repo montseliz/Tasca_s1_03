@@ -40,12 +40,12 @@ public class Main_s1_3_niv1_ex1_montseliz {
 		
 		System.out.println("\nConverteixo l'ArrayList en un HashSet, comprovo que no admet duplicats i la recorro amb un for each:\n");
 		
-		Set<Month> setMonths = new HashSet<Month>(arrayMonths); 
+		Set<Month> hashsetMonths = new HashSet<Month>(arrayMonths); 
 		
-		setMonths.add(new Month("Agost")); 
-		setMonths.add(new Month("Desembre"));  
+		hashsetMonths.add(new Month("Agost")); 
+		hashsetMonths.add(new Month("Desembre"));  
 		
-		for (Month months: setMonths) {
+		for (Month months: hashsetMonths) {
 			System.out.println(months.toString()); 
 		}
 	}

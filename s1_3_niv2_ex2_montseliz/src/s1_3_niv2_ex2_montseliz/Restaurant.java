@@ -46,6 +46,7 @@ public class Restaurant implements Comparable<Restaurant>{
 	
 	@Override
 	public int compareTo(Restaurant o) { 
+
 		int comparatorName = o.getName().compareTo(this.getName());
 		int finalValue = 0; 
 		
@@ -60,7 +61,7 @@ public class Restaurant implements Comparable<Restaurant>{
 		} else {
 			finalValue = 1; 
 		}
-		return finalValue; 
+		return finalValue;  
 	}
 
 	public String toString() {

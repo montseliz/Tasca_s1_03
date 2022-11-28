@@ -40,6 +40,7 @@ public class Main_s1_3_niv1_ex3_montseliz {
 			try {
 				if(null != fr) {
 					fr.close(); 
+					br.close();
 				}
 			} catch (Exception e) {
 				e.printStackTrace(); 
@@ -71,22 +72,23 @@ public class Main_s1_3_niv1_ex3_montseliz {
 	public static void createFile(int points, String name) {
 		File file = new File("src\\classificacio.txt"); 
 		FileWriter fw = null; 
-		PrintWriter pw = null; 
+		BufferedWriter bw = null; 
 		
 		try {
-			fw = new FileWriter ("src\\classificacio.txt"); 
-			if (!file.exists()) {
+			fw = new FileWriter (file, true); 
+			/*if (!file.exists()) {
 				file.createNewFile(); 
-			}
-			pw = new PrintWriter (fw); 
-			pw.println("Nom: " + name + "\nPunts: " + points); 
+			} */ 
+			bw = new BufferedWriter (fw); 
+			bw.write("Nom: " + name + "\nPunts: " + points); 
 			System.out.println("Arxiu guardat correctament.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			try {
 				if(null != fw) {
-					fw.close(); 
+					fw.close();
+					bw.close();
 				}
 			} catch (Exception e) {
 				e.printStackTrace(); 
