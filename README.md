@@ -48,5 +48,6 @@ per nom i per puntuació en ordre ascendent.
 Exemple: 
 
 nom: restaurant1, puntuació: 8
+
 nom: restaurant1, puntuació: 7
 
